@@ -6,9 +6,17 @@ with open("input") as f:
 
 
 def solve1():
+    print("-"*25)
+    print(" "*9  + "Solve1")
+    print("-"*25)
+    
     pass
 
 def solve2():
+    print("-"*25)
+    print(" "*9  + "Solve2")
+    print("-"*25)
+    
     pass
 
 if __name__=="__main__":
