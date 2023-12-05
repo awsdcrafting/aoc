@@ -2,6 +2,10 @@
 import re
 import pprint
 
+import time
+
+start_time = time.perf_counter_ns()
+
 input=[]
 with open("input") as f:
     input = f.read().splitlines() # lines without \n
@@ -72,5 +76,8 @@ def solve2():
 if __name__=="__main__":
     solve1()
     solve2()
+    
+    end_time = time.perf_counter_ns()
+    print(f"{end_time-start_time}ns {(end_time-start_time)/1000000}ms")
 
 
