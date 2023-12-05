@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 from dataclasses import dataclass
 import math
+from os import stat
 
+import time
+
+start = time.perf_counter_ns()
 
 input=[]
 with open("input") as f:
@@ -47,13 +51,11 @@ def solve2():
     for idx, card in enumerate(cards):
         winning_count = len(set(card.numbers).intersection(set(card.winning_numbers)))
         for i in range(winning_count):
-            if i > len(cards):
-                break
             cards[idx+i+1].count += card.count
     print(sum([card.count for card in cards]))
 
 if __name__=="__main__":
     solve1()
     solve2()
-
-
+    end = time.perf_counter_ns()
+    print(f"{end-start}ns {(end-start)/1000000}ms")

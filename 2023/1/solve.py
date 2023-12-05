@@ -34,7 +34,7 @@ def solve1():
     print("-"*25)
     print(" "*9  + "Solve1")
     print("-"*25)
-    numbers = [[x for x in line if x.isdigit()]for line in input]
+    numbers = [[x for x in line if x.isdigit()] for line in input]
     number_sum = [int(number[0] + number[-1]) for number in numbers]
     #print(number_sum)
     print(sum(number_sum))

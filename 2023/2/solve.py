@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 from dataclasses import dataclass
 
+import math
+
 input=[]
 with open("input") as f:
     input = f.read().splitlines() # lines without \n
@@ -59,10 +61,7 @@ def solve2():
             for cube, amount in record.cube_amount.items():
                 if cube not in min_amount or amount > min_amount[cube]:
                     min_amount[cube] = amount
-        power = 1
-        for amount in min_amount.values():
-            power *= amount
-        return power
+        return math.prod(min_amount.values())
     print(sum([calculate_power(game) for game in games]))
     pass
 
