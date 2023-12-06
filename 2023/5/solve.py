@@ -126,6 +126,7 @@ def solve2():
 
 
     res = None
+
     from multiprocessing import Pool
     results = []
     with Pool() as executor:
